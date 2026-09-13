@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="shop.css">
   </head>
   <body>
@@ -24,7 +25,40 @@
     <p>Lectro Shock Rifle - Available (leg)</p>
     <p>Scrapper Spear - Available (leg & epic)</p>
     <p>Papa Bear - Available (leg & epic)</p>
+    <br>
+    <hr>
+    <br>
+    <p>Moddeds</p>
+    <div class="display-grid">
+      <img class="research" src="media/1.png" alt="1">
+      <img class="research" src="" alt="placeholder">
+      <img class="research" src="" alt="placeholder">
     </div>
     </div>
+    </div>
+    <script>
+      const images = document.querySelectorAll(".research");
+
+images.forEach(image => {
+    image.addEventListener("click", (event) => {
+        event.stopPropagation();
+
+        if (document.querySelector(".research.enlarged")) {
+            document.querySelector(".research.enlarged").classList.remove("enlarged");
+            return;
+        }
+
+        image.classList.add("enlarged");
+    });
+});
+
+document.addEventListener("click", () => {
+    const enlargedImage = document.querySelector(".research.enlarged");
+
+    if (enlargedImage) {
+        enlargedImage.classList.remove("enlarged");
+    }
+});
+    </script>
   </body>
 </html>
