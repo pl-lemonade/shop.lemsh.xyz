@@ -99,6 +99,6 @@ body {
 }
 }
 
-p.dim {
+p.dim, .dim {
   color: #696969;
 }
